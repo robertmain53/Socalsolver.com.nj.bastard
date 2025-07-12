@@ -1,47 +1,569 @@
 {
   "finance": {
     "title": "Finance",
-    "description": "Tools for personal finance, loans, investments, and taxes.",
-    "metaTitle": "Finance Calculators - SoCalSolver",
-    "metaDescription": "Explore a complete suite of calculators to manage your finances, loans, and investments effectively.",
+    "description": "Calculators for personal finance, loans, savings, budgeting, and more.",
+    "metaTitle": "Finance Calculators | SoCalSolver",
+    "metaDescription": "Explore calculators for mortgage payments, interest, ROI, credit card payoffs, taxes, and budgeting.",
     "noindex": false,
     "faqs": [
-      {
-        "q": "What are financial calculators used for?",
-        "a": "They help estimate payments, interest, and returns for better decision-making."
-      },
-      {
-        "q": "Are the results accurate?",
-        "a": "Calculations are based on standard formulas, but always consult a professional."
-      }
+      { "q": "What can finance calculators help with?", "a": "They assist in calculating mortgage payments, interest rates, returns, and more." },
+      { "q": "Are these calculators accurate for financial planning?", "a": "They provide reliable estimates, but consult a financial advisor for major decisions." }
     ],
     "children": {
-      "loans-mortgages": {
+      "loans_mortgages": {
         "title": "Loans & Mortgages",
-        "description": "Calculate mortgages, affordability, amortization schedules.",
-        "metaTitle": "Loan & Mortgage Calculators - SoCalSolver",
-        "metaDescription": "Find out your mortgage payments, loan limits, refinancing options and more.",
-        "noindex": false,
-        "faqs": [
-          {
-            "q": "How do I calculate my mortgage?",
-            "a": "Use our Mortgage Payment Calculator with loan amount, term, and interest rate."
-          }
-        ],
+        "description": "Estimate mortgage payments, affordability, refinancing, and various loan types.",
         "children": {
-          "mortgage-payment": {
-            "title": "Mortgage Payment",
-            "description": "Estimate monthly mortgage payments based on loan amount, rate, and term.",
-            "metaTitle": "Mortgage Payment Calculator",
-            "metaDescription": "Easily estimate your monthly home loan payments with our mortgage calculator.",
-            "noindex": false,
-            "faqs": [
-              {
-                "q": "Does this calculator include taxes and insurance?",
-                "a": "No, it only calculates principal and interest. Add taxes and insurance separately."
-              }
-            ]
-          }
+          "mortgage_payment": { "title": "Mortgage Payment" },
+          "mortgage_refinance": { "title": "Mortgage Refinance" },
+          "loan_affordability": { "title": "Loan Affordability" },
+          "loan_amortization": { "title": "Loan Amortization" },
+          "personal_loan": { "title": "Personal Loan" },
+          "car_loan": { "title": "Car Loan" },
+          "student_loan": { "title": "Student Loan" }
+        }
+      },
+      "investment_savings": {
+        "title": "Investment & Savings",
+        "description": "Calculate interest, ROI, retirement, and crypto returns.",
+        "children": {
+          "compound_interest": { "title": "Compound Interest" },
+          "simple_interest": { "title": "Simple Interest" },
+          "roi": { "title": "Return on Investment (ROI)" },
+          "savings_goal": { "title": "Savings Goal" },
+          "retirement_planning": { "title": "Retirement Planning" },
+          "stock_dividend_yield": { "title": "Dividend Yield" },
+          "stock_pe_ratio": { "title": "P/E Ratio" },
+          "mutual_fund_returns": { "title": "Mutual Fund / ETF Returns" },
+          "crypto_profit_loss": { "title": "Cryptocurrency Profit / Loss" },
+          "crypto_mining": { "title": "Cryptocurrency Mining" }
+        }
+      },
+      "budgeting_personal_finance": {
+        "title": "Budgeting & Personal Finance",
+        "description": "Plan budgets, track expenses, and assess debt.",
+        "children": {
+          "monthly_budget": { "title": "Monthly Budget" },
+          "expense_tracker": { "title": "Expense Tracker" },
+          "net_worth": { "title": "Net Worth" },
+          "debt_to_income": { "title": "Debt-to-Income Ratio" },
+          "emergency_fund": { "title": "Emergency Fund" }
+        }
+      },
+      "taxes": {
+        "title": "Taxes",
+        "description": "Estimate income, sales, and capital gains taxes.",
+        "children": {
+          "income_tax": { "title": "Income Tax" },
+          "sales_tax": { "title": "Sales Tax / VAT" },
+          "capital_gains_tax": { "title": "Capital Gains Tax" }
+        }
+      },
+      "credit_cards": {
+        "title": "Credit Cards",
+        "description": "Manage credit-card debt and rewards.",
+        "children": {
+          "credit_card_payoff": { "title": "Credit Card Payoff" },
+          "balance_transfer": { "title": "Balance Transfer" },
+          "rewards_value": { "title": "Rewards Value" }
+        }
+      },
+      "inflation": {
+        "title": "Inflation",
+        "description": "Adjust money values for inflation.",
+        "children": {
+          "inflation_adjustment": { "title": "Inflation Adjustment" },
+          "purchasing_power": { "title": "Purchasing Power" }
+        }
+      }
+    }
+  },
+
+  "mathematics": {
+    "title": "Mathematics",
+    "description": "Essential tools for arithmetic, algebra, geometry, calculus, and more.",
+    "metaTitle": "Math Calculators | SoCalSolver",
+    "metaDescription": "Perform calculations from basic arithmetic to calculus and statistics.",
+    "noindex": false,
+    "faqs": [
+      { "q": "What topics are covered in math calculators?", "a": "From basic arithmetic to calculus, trigonometry, statistics, and conversions." },
+      { "q": "Are these tools suitable for students?", "a": "Yes, they are designed for learners at all levels." }
+    ],
+    "children": {
+      "basic_arithmetic": {
+        "title": "Basic Arithmetic",
+        "description": "Add, subtract, multiply, divide, and more.",
+        "children": {
+          "addition": { "title": "Addition" },
+          "subtraction": { "title": "Subtraction" },
+          "multiplication": { "title": "Multiplication" },
+          "division": { "title": "Division" },
+          "percentage": { "title": "Percentage" },
+          "fractions": { "title": "Fractions" },
+          "ratios_proportions": { "title": "Ratios & Proportions" }
+        }
+      },
+      "algebra": {
+        "title": "Algebra",
+        "description": "Solve algebraic equations and expressions.",
+        "children": {
+          "linear_solver": { "title": "Linear Equation Solver" },
+          "quadratic_solver": { "title": "Quadratic Solver" },
+          "factoring": { "title": "Factoring" },
+          "logs_exponents": { "title": "Logarithms & Exponents" }
+        }
+      },
+      "geometry": {
+        "title": "Geometry",
+        "description": "Compute area, volume, perimeter, and angles.",
+        "children": {
+          "area_circle": { "title": "Circle Area" },
+          "area_square": { "title": "Square Area" },
+          "area_triangle": { "title": "Triangle Area" },
+          "volume_cube": { "title": "Cube Volume" },
+          "volume_sphere": { "title": "Sphere Volume" },
+          "volume_cylinder": { "title": "Cylinder Volume" },
+          "perimeter": { "title": "Perimeter/Circumference" },
+          "pythagorean_theorem": { "title": "Pythagorean Theorem" },
+          "angle_converter": { "title": "Angle Converter" }
+        }
+      },
+      "trigonometry": {
+        "title": "Trigonometry",
+        "description": "Evaluate trigonometric functions and triangles.",
+        "children": {
+          "trig_functions": { "title": "Trigonometric Functions" },
+          "triangle_solver": { "title": "Triangle Solver" }
+        }
+      },
+      "calculus": {
+        "title": "Calculus",
+        "description": "Derivatives, integrals, and limits.",
+        "children": {
+          "derivative": { "title": "Derivative Calculator" },
+          "integral": { "title": "Integral Calculator" },
+          "limit": { "title": "Limit Calculator" }
+        }
+      },
+      "statistics_probability": {
+        "title": "Statistics & Probability",
+        "description": "Analyze data and probability.",
+        "children": {
+          "mean_median_mode": { "title": "Mean, Median, Mode" },
+          "std_variance": { "title": "Standard Deviation & Variance" },
+          "probability": { "title": "Probability" },
+          "permutations_combinations": { "title": "Permutations & Combinations" },
+          "regression": { "title": "Regression Analysis" }
+        }
+      },
+      "number_theory": {
+        "title": "Number Theory",
+        "children": {
+          "prime_numbers": { "title": "Prime Numbers" },
+          "gcd": { "title": "Greatest Common Divisor (GCD)" },
+          "lcm": { "title": "Least Common Multiple (LCM)" }
+        }
+      },
+      "conversions": {
+        "title": "Conversions",
+        "children": {
+          "base_converter": { "title": "Number Base Converter" },
+          "roman_numerals": { "title": "Roman Numerals" }
+        }
+      }
+    }
+  },
+
+  "health": {
+    "title": "Health & Fitness",
+    "description": "Track body metrics, nutrition, pregnancy, sleep and exercise.",
+    "metaTitle": "Health Calculators | SoCalSolver",
+    "metaDescription": "BMI, calorie burn, BMR, hydration, pregnancy, and more.",
+    "noindex": false,
+    "faqs": [
+      { "q": "Are these tools medically accurate?", "a": "They are for educational purposes only and should not replace professional advice." }
+    ],
+    "children": {
+      "body_metrics": {
+        "title": "Body Metrics",
+        "children": {
+          "bmi": { "title": "Body Mass Index (BMI)" },
+          "bmr": { "title": "Basal Metabolic Rate (BMR)" },
+          "tdee": { "title": "Total Daily Energy Expenditure (TDEE)" },
+          "body_fat": { "title": "Body Fat Percentage" },
+          "ideal_weight": { "title": "Ideal Weight" },
+          "lean_body_mass": { "title": "Lean Body Mass" }
+        }
+      },
+      "nutrition": {
+        "title": "Nutrition & Diet",
+        "children": {
+          "calorie_counter": { "title": "Calorie Counter" },
+          "macronutrients": { "title": "Macronutrient Calculator" },
+          "water_intake": { "title": "Water Intake" },
+          "diet_points": { "title": "Diet Points Calculator" }
+        }
+      },
+      "fitness_exercise": {
+        "title": "Fitness & Exercise",
+        "children": {
+          "calories_burned": { "title": "Calories Burned" },
+          "target_heart_rate": { "title": "Target Heart Rate" },
+          "pace_calculator": { "title": "Pace Calculator" },
+          "one_rep_max": { "title": "One-Rep Max" }
+        }
+      },
+      "pregnancy_fertility": {
+        "title": "Pregnancy & Fertility",
+        "children": {
+          "ovulation": { "title": "Ovulation Calculator" },
+          "due_date": { "title": "Due Date Calculator" },
+          "pregnancy_weight_gain": { "title": "Pregnancy Weight Gain" }
+        }
+      },
+      "health_risks": {
+        "title": "Health Risks",
+        "children": {
+          "bac": { "title": "Blood Alcohol Content (BAC)" },
+          "smoking_cost": { "title": "Smoking Cost" }
+        }
+      },
+      "sleep": {
+        "title": "Sleep",
+        "children": {
+          "sleep_cycle": { "title": "Sleep Cycle Calculator" }
+        }
+      }
+    }
+  },
+
+  "science": {
+    "title": "Science & Engineering",
+    "description": "Physics, chemistry, electronics, mechanics, and more.",
+    "metaTitle": "Science Calculators | SoCalSolver",
+    "metaDescription": "Ohm’s Law, Molarity, Torque, Light Years, and more.",
+    "noindex": false,
+    "faqs": [
+      { "q": "Are these tools for students or professionals?", "a": "They are useful for both learners and field engineers." }
+    ],
+    "children": {
+      "physics": {
+        "title": "Physics",
+        "children": {
+          "ohms_law": { "title": "Ohm's Law" },
+          "newtons_law": { "title": "Force = Mass × Acceleration" },
+          "energy": { "title": "Energy (Kinetic & Potential)" },
+          "speed_distance_time": { "title": "Speed, Distance, Time" },
+          "pressure": { "title": "Pressure" },
+          "density": { "title": "Density" },
+          "frequency_wavelength": { "title": "Frequency & Wavelength" }
+        }
+      },
+      "chemistry": {
+        "title": "Chemistry",
+        "children": {
+          "molarity": { "title": "Molarity" },
+          "molar_mass": { "title": "Molar Mass" },
+          "ph": { "title": "pH Calculator" },
+          "gas_laws": { "title": "Ideal Gas Law" },
+          "dilution": { "title": "Dilution" }
+        }
+      },
+      "electronics": {
+        "title": "Electronics",
+        "children": {
+          "resistor_color_code": { "title": "Resistor Color Code" },
+          "capacitance": { "title": "Capacitance" },
+          "inductance": { "title": "Inductance" },
+          "power": { "title": "Power (Watts/Volts/Amps)" }
+        }
+      },
+      "mechanics": {
+        "title": "Mechanics",
+        "children": {
+          "torque": { "title": "Torque" },
+          "gear_ratio": { "title": "Gear Ratio" },
+          "stress_strain": { "title": "Stress & Strain" }
+        }
+      },
+      "astronomy": {
+        "title": "Astronomy",
+        "children": {
+          "planet_weight": { "title": "Planet Weight" },
+          "light_year": { "title": "Light Year Converter" }
+        }
+      },
+      "fluid_dynamics": {
+        "title": "Fluid Dynamics",
+        "children": {
+          "flow_rate": { "title": "Flow Rate" },
+          "reynolds_number": { "title": "Reynolds Number" }
+        }
+      }
+    }
+  },
+
+  "everyday": {
+    "title": "Everyday Life & Utilities",
+    "description": "Daily tools for conversions, cooking, travel, and more.",
+    "metaTitle": "Everyday Tools | SoCalSolver",
+    "metaDescription": "Use daily life calculators for cooking, travel, utilities and more.",
+    "noindex": false,
+    "children": {
+      "unit_conversions": {
+        "title": "Unit Conversions",
+        "children": {
+          "length": { "title": "Length Converter" },
+          "weight_mass": { "title": "Weight / Mass Converter" },
+          "temperature": { "title": "Temperature Converter" },
+          "volume": { "title": "Volume Converter" },
+          "speed": { "title": "Speed Converter" },
+          "area": { "title": "Area Converter" },
+          "pressure": { "title": "Pressure Converter" },
+          "energy": { "title": "Energy Converter" },
+          "data_storage": { "title": "Data Storage Converter" }
+        }
+      },
+      "time_date": {
+        "title": "Time & Date",
+        "children": {
+          "date_duration": { "title": "Date Duration" },
+          "timezone_converter": { "title": "Time Zone Converter" },
+          "age_calculator": { "title": "Age Calculator" },
+          "countdown_timer": { "title": "Countdown Timer / Stopwatch" }
+        }
+      },
+      "cooking_kitchen": {
+        "title": "Cooking & Kitchen",
+        "children": {
+          "recipe_scaler": { "title": "Recipe Scaler" },
+          "cooking_conversions": { "title": "Cooking Conversions" },
+          "baking_ratios": { "title": "Baking Ingredient Ratios" }
+        }
+      },
+      "travel": {
+        "title": "Travel",
+        "children": {
+          "fuel_cost": { "title": "Fuel Cost / Consumption" },
+          "currency_converter": { "title": "Currency Converter" },
+          "distance_calculator": { "title": "Distance Calculator" }
+        }
+      },
+      "hobbies": {
+        "title": "Hobbies",
+        "children": {
+          "gardening": { "title": "Seed Spacing" },
+          "photography": { "title": "Depth of Field" },
+          "knitting": { "title": "Yarn Needed" }
+        }
+      },
+      "clothing": {
+        "title": "Clothing",
+        "children": {
+          "clothing_size": { "title": "Clothing Size Converter" },
+          "shoe_size": { "title": "Shoe Size Converter" }
+        }
+      }
+    }
+  },
+
+  "business": {
+    "title": "Business & Productivity",
+    "description": "Tools for finance, marketing, HR, and operations.",
+    "metaTitle": "Business Calculators | SoCalSolver",
+    "metaDescription": "Profit margin, break-even, depreciation, salary, and more.",
+    "noindex": false,
+    "children": {
+      "sales_marketing": {
+        "title": "Sales & Marketing",
+        "children": {
+          "profit_margin": { "title": "Profit Margin" },
+          "break_even": { "title": "Break-Even Point" },
+          "clv": { "title": "Customer Lifetime Value" },
+          "conversion_rate": { "title": "Conversion Rate" },
+          "cpc_cpm": { "title": "CPC / CPM" },
+          "roas": { "title": "Return on Ad Spend (ROAS)" }
+        }
+      },
+      "operations": {
+        "title": "Operations",
+        "children": {
+          "eoq": { "title": "Economic Order Quantity" },
+          "work_hours": { "title": "Work Hours Calculator" },
+          "task_time": { "title": "Task Time" }
+        }
+      },
+      "business_finance": {
+        "title": "Business Finance",
+        "children": {
+          "business_loan": { "title": "Business Loan" },
+          "depreciation": { "title": "Depreciation" },
+          "gross_net_profit": { "title": "Gross / Net Profit" }
+        }
+      },
+      "human_resources": {
+        "title": "Human Resources",
+        "children": {
+          "salary": { "title": "Salary / Hourly Wage" },
+          "overtime_pay": { "title": "Overtime Pay" },
+          "time_card": { "title": "Time Card Calculator" }
+        }
+      }
+    }
+  },
+
+  "education": {
+    "title": "Education",
+    "description": "Academic tools for grading, study, and writing.",
+    "metaTitle": "Education Calculators | SoCalSolver",
+    "metaDescription": "GPA, weighted grades, study planners, and more.",
+    "noindex": false,
+    "children": {
+      "grading": {
+        "title": "Grading",
+        "children": {
+          "gpa": { "title": "GPA Calculator" },
+          "exam_grade": { "title": "Exam Grade" },
+          "weighted_grade": { "title": "Weighted Grade" }
+        }
+      },
+      "study": {
+        "title": "Study",
+        "children": {
+          "wpm_reading": { "title": "Reading Speed (WPM)" },
+          "study_time": { "title": "Study Time Planner" }
+        }
+      },
+      "academic_writing": {
+        "title": "Academic Writing",
+        "children": {
+          "word_count": { "title": "Word / Character Count" },
+          "citation_format": { "title": "Citation Formatting" }
+        }
+      }
+    }
+  },
+
+  "environment": {
+    "title": "Environment & Sustainability",
+    "description": "Calculate energy, carbon footprint, and water usage.",
+    "metaTitle": "Environment Calculators | SoCalSolver",
+    "metaDescription": "Electricity cost, carbon footprint, recycling impact, and more.",
+    "noindex": false,
+    "children": {
+      "energy_consumption": {
+        "title": "Energy & Consumption",
+        "children": {
+          "electricity_cost": { "title": "Electricity Cost" },
+          "fuel_efficiency": { "title": "Fuel Efficiency" },
+          "appliance_energy": { "title": "Appliance Energy Use" }
+        }
+      },
+      "carbon_footprint": {
+        "title": "Carbon Footprint",
+        "children": {
+          "personal_carbon": { "title": "Personal Carbon Footprint" },
+          "travel_carbon": { "title": "Travel Carbon Footprint" }
+        }
+      },
+      "waste_recycling": {
+        "title": "Waste & Recycling",
+        "children": {
+          "recycling_impact": { "title": "Recycling Impact" }
+        }
+      },
+      "water_usage": {
+        "title": "Water Usage",
+        "children": {
+          "household_water": { "title": "Household Water Consumption" }
+        }
+      }
+    }
+  },
+
+  "construction": {
+    "title": "Construction & DIY",
+    "description": "Material estimators and project planning tools.",
+    "metaTitle": "Construction Calculators | SoCalSolver",
+    "metaDescription": "Paint, concrete, lumber estimators, staircase calculators, and more.",
+    "noindex": false,
+    "children": {
+      "materials_estimation": {
+        "title": "Materials Estimation",
+        "children": {
+          "paint": { "title": "Paint Calculator" },
+          "tile": { "title": "Tile Calculator" },
+          "concrete": { "title": "Concrete / Cement Calculator" },
+          "lumber": { "title": "Lumber Calculator" },
+          "wallpaper": { "title": "Wallpaper Calculator" },
+          "flooring": { "title": "Flooring Calculator" }
+        }
+      },
+      "project_planning": {
+        "title": "Project Planning",
+        "children": {
+          "room_area": { "title": "Room Area / Volume" },
+          "staircase": { "title": "Staircase Calculator" },
+          "rafter": { "title": "Rafter Calculator" }
+        }
+      },
+      "measurements_layout": {
+        "title": "Measurements & Layout",
+        "children": {
+          "right_angle": { "title": "Right Angle Calculator" },
+          "slope_grade": { "title": "Slope / Grade Calculator" }
+        }
+      }
+    }
+  },
+
+  "fun": {
+    "title": "Fun & Miscellaneous",
+    "description": "Games, love, astrology, food, and text utilities.",
+    "metaTitle": "Fun Calculators | SoCalSolver",
+    "metaDescription": "Random number, tip, compatibility, zodiac, and more.",
+    "noindex": false,
+    "children": {
+      "games": {
+        "title": "Games & Gaming",
+        "children": {
+          "dice_roller": { "title": "Dice Roller" },
+          "random_number": { "title": "Random Number Generator" },
+          "game_score": { "title": "Game Score Calculator" }
+        }
+      },
+      "love_relationships": {
+        "title": "Love & Relationships",
+        "children": {
+          "love_compatibility": { "title": "Love Compatibility" },
+          "anniversary": { "title": "Anniversary Calculator" }
+        }
+      },
+      "astrology_numerology": {
+        "title": "Astrology & Numerology",
+        "children": {
+          "zodiac_sign": { "title": "Zodiac Sign" },
+          "life_path_number": { "title": "Life Path Number" }
+        }
+      },
+      "food_drink": {
+        "title": "Food & Drink",
+        "children": {
+          "pizza_slices": { "title": "Pizza Slices per Person" },
+          "tip_calculator": { "title": "Tip Calculator" }
+        }
+      },
+      "historical": {
+        "title": "Historical",
+        "children": {
+          "on_this_day": { "title": "On This Day" }
+        }
+      },
+      "text_string": {
+        "title": "Text & String Utilities",
+        "children": {
+          "word_count": { "title": "Word / Character Count" },
+          "text_binary": { "title": "Text ↔ Binary Converter" }
         }
       }
     }

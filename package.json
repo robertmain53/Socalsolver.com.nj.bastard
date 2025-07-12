@@ -14,7 +14,9 @@
     "test:api": "node test/improve-api.test.js",
     "validate:seo": "tsx scripts/validate-seo.ts",
     "validate:schema": "tsx scripts/validate-schema.ts",
-    "build:prod": "NEXTJS_IGNORE_ESLINT=1 next build"
+    "build:prod": "NEXTJS_IGNORE_ESLINT=1 next build",
+    "generate-sitemap": "ts-node scripts/generate-sitemap.ts"
+
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
