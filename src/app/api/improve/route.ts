@@ -1,14 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { improveContentWithAI } from '@/lib/ai/improve';
-import { diffLines } from 'diff';
-
-export const runtime = 'nodejs';
-
-export async function POST(req: NextRequest) {
-  const { slug, content } = await req.json();
-
-  const improved = await improveContentWithAI({ slug, content });
-
-  const diff = diffLines(content, improved);
-  return NextResponse.json({ improved, diff });
+import { OpenAI } from 'openai'
+import { getDiff } from '@/lib/diff'
+export const runtime='edge'
+export async function POST(req:Request){
+ const {original='',edited=''} = await req.json()
+ const diff = getDiff(original,edited)
+ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+ const r = await openai.chat.completions.create({
+   model:'gpt-4o-mini',
+   messages:[{role:'system',content:'Improve:'},{role:'user',content:diff}]
+ })
+ return Response.json({ improved:r.choices[0].message.content,diff })
 }

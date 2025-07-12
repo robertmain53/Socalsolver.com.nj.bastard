@@ -1,0 +1,49 @@
+{
+  "finance": {
+    "title": "Finance",
+    "description": "Tools for personal finance, loans, investments, and taxes.",
+    "metaTitle": "Finance Calculators - SoCalSolver",
+    "metaDescription": "Explore a complete suite of calculators to manage your finances, loans, and investments effectively.",
+    "noindex": false,
+    "faqs": [
+      {
+        "q": "What are financial calculators used for?",
+        "a": "They help estimate payments, interest, and returns for better decision-making."
+      },
+      {
+        "q": "Are the results accurate?",
+        "a": "Calculations are based on standard formulas, but always consult a professional."
+      }
+    ],
+    "children": {
+      "loans-mortgages": {
+        "title": "Loans & Mortgages",
+        "description": "Calculate mortgages, affordability, amortization schedules.",
+        "metaTitle": "Loan & Mortgage Calculators - SoCalSolver",
+        "metaDescription": "Find out your mortgage payments, loan limits, refinancing options and more.",
+        "noindex": false,
+        "faqs": [
+          {
+            "q": "How do I calculate my mortgage?",
+            "a": "Use our Mortgage Payment Calculator with loan amount, term, and interest rate."
+          }
+        ],
+        "children": {
+          "mortgage-payment": {
+            "title": "Mortgage Payment",
+            "description": "Estimate monthly mortgage payments based on loan amount, rate, and term.",
+            "metaTitle": "Mortgage Payment Calculator",
+            "metaDescription": "Easily estimate your monthly home loan payments with our mortgage calculator.",
+            "noindex": false,
+            "faqs": [
+              {
+                "q": "Does this calculator include taxes and insurance?",
+                "a": "No, it only calculates principal and interest. Add taxes and insurance separately."
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

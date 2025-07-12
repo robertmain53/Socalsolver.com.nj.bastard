@@ -1,0 +1,22 @@
+{
+  "finance": {
+    "title": "Finance",
+    "description": "Outils pour les prêts, les investissements et la gestion financière.",
+    "metaTitle": "Calculatrices financières - SoCalSolver",
+    "metaDescription": "Gérez vos finances avec des outils de calcul simples et puissants.",
+    "faqs": [
+      {
+        "q": "À quoi servent les calculateurs financiers ?",
+        "a": "Ils vous aident à estimer paiements, intérêts et rendements."
+      }
+    ],
+    "children": {
+      "loans-mortgages": {
+        "title": "Prêts & Hypothèques",
+        "description": "Calculez paiements hypothécaires, accessibilité, amortissements.",
+        "metaTitle": "Calculatrices de prêts - SoCalSolver",
+        "metaDescription": "Explorez nos outils pour les prêts immobiliers et personnels."
+      }
+    }
+  }
+}

@@ -150,4 +150,3 @@ TS
 [ -f tailwind.config.js ] || echo 'module.exports={content:["src/**/*.{ts,tsx,mdx}"],theme:{extend:{}},plugins:[]}' > tailwind.config.js
 
 echo "✅ App-Router installer finished."
-Type 'nano -h' for a list of available options.

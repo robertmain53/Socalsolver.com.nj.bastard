@@ -1,0 +1,18 @@
+{
+  "finance": {
+    "title": "Financiacion",
+    "description": "Dinero, prestamos, inversiones",
+    "children": {
+      "loans-mortgages": {
+        "title": "Prestamos e hipotecas",
+        "children": {
+          "mortgage-payment": "Mortgage Payment",
+          "loan-amortization": "Loan Amortization"
+          /* … */
+        }
+      }
+      /* more subcats */
+    }
+  },
+  "mathematics": { /* … */ }
+}

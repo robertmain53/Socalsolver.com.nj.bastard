@@ -1,0 +1,18 @@
+{
+  "finance": {
+    "title": "Finanza",
+    "description": "Soldi, prestiti, investimenti",
+    "children": {
+      "loans-mortgages": {
+        "title": "Prestiti & mutui",
+        "children": {
+          "mortgage-payment": "Pagamento mutui",
+          "loan-amortization": "Ammortamento dei presisti"
+          /* … */
+        }
+      }
+      /* more subcats */
+    }
+  },
+  "matematica": { /* … */ }
+}

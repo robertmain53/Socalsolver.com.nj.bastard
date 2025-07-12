@@ -1,6 +1,4 @@
 import { diffLines } from 'diff'
-export function getDiff(before: string, after: string): string {
-  return diffLines(before, after)
-    .map(p => (p.added ? '[+]' : p.removed ? '[-]' : '[ ]') + p.value)
-    .join('')
+export function getDiff(a:string,b:string){
+ return diffLines(a,b).map(p=>(p.added?'[+]':p.removed?'[-]':'[ ]')+p.value).join('')
 }
