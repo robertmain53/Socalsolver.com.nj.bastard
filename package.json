@@ -5,18 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "translate": "node scripts/translation-script.js --translate",
-    "generate-translations": "node scripts/translation-script.js --component",
-    "prepare": "husky install",
-    "new:calculator": "tsx scripts/new-calculator.ts",
-    "test:api": "node test/improve-api.test.js",
-    "validate:seo": "tsx scripts/validate-seo.ts",
-    "validate:schema": "tsx scripts/validate-schema.ts",
-    "build:prod": "NEXTJS_IGNORE_ESLINT=1 next build",
-    "generate-sitemap": "ts-node scripts/generate-sitemap.js",
-    "build-search": "node scripts/build-search-index.js"
+    "start": "next start"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
@@ -77,7 +66,9 @@
     "eslint-config-next": "^13.5.11",
     "glob": "^11.0.3",
     "husky": "^9.1.7",
+    "json": "^11.0.0",
     "prettier": "^3.6.2",
+    "replace-in-file": "^8.3.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.3",
     "typescript": "^5.1.6"

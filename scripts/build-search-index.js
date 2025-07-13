@@ -1,13 +1,18 @@
-import fs from 'fs/promises'
+import fs from 'fs'
 import path from 'path'
-const SRC = 'content/calculators'
-const DEST = 'public/search-index.json'
-const list = await fs.readdir(SRC)
-const out = []
-for (const file of list.filter(f=>f.endsWith('.json'))) {
-  const data = JSON.parse(await fs.readFile(path.join(SRC,file),'utf8'))
-  out.push({ slug: data.slug, title: data.title?.en || data.slug })
+
+const genDir = path.join(process.cwd(), 'generated', 'calculators')
+const outFile = path.join(process.cwd(), 'public', 'search-index.json')
+
+let index = []
+
+if (fs.existsSync(genDir)) {
+  const files = fs.readdirSync(genDir)
+  for (const file of files) {
+    const slug = file.replace('.js', '')
+    index.push({ slug, title: slug.replace(/-/g, ' ') })
+  }
 }
-await fs.mkdir('public',{recursive:true})
-await fs.writeFile(DEST, JSON.stringify(out))
-console.log('✅ search-index.json written')
+
+fs.writeFileSync(outFile, JSON.stringify(index, null, 2))
+console.log(`🔍 Indexed ${index.length} calculators`)

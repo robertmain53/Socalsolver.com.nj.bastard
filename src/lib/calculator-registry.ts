@@ -1,12 +1,25 @@
-// src/lib/calculator-registry.ts
+import fs from 'fs'
+import path from 'path'
 
-export async function loadCalculator(slug: string): Promise<any | null> {
+const calcDir = path.join(process.cwd(), 'generated', 'calculators')
+
+export async function loadCalculator(slug: string) {
   try {
-    const module = await import(`../../generated/calculators/${slug}.js`)
-    return module?.default || module
-  } catch (err: any) {
-    console.error(`❌ Calculator module not found for slug: ${slug}`)
+    const mod = await import(`../../generated/calculators/${slug}.js`)
+    return mod.default || mod
+  } catch {
     return null
   }
 }
 
+export function calculators(): string[] {
+  return fs.existsSync(calcDir)
+    ? fs.readdirSync(calcDir).filter(f => f.endsWith('.js')).map(f => f.replace('.js', ''))
+    : []
+}
+
+// NEW: Used by category/subcategory pages
+export function getCalculatorsByCategory(category: string): string[] {
+  const all = calculators()
+  return all.filter(slug => slug.includes(category)) // Adjust logic as needed
+}

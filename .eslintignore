@@ -9,3 +9,4 @@ recommendations/**
 scripts/**
 automation/**
 dev-portal/**
+src/analytics.disabled/
