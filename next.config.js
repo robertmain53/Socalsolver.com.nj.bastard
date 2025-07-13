@@ -2,8 +2,7 @@
 const nextConfig = {
   i18n: {
     locales: ['en', 'es', 'it', 'fr'],
-    defaultLocale: 'en',
-    localeDetection: false,
+    defaultLocale: 'en'
   },
   experimental: {
     serverActions: true,   // 👈 add this line

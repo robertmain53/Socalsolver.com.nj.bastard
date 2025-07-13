@@ -7,6 +7,11 @@ const defaultLocale = 'en';
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL('/en', request.url))
+  }
+  return NextResponse.next()
+
   if (
     PUBLIC_FILE.test(pathname) ||
     pathname.startsWith('/api')

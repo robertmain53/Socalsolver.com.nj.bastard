@@ -15,7 +15,7 @@
     "validate:seo": "tsx scripts/validate-seo.ts",
     "validate:schema": "tsx scripts/validate-schema.ts",
     "build:prod": "NEXTJS_IGNORE_ESLINT=1 next build",
-    "generate-sitemap": "ts-node scripts/generate-sitemap.ts"
+    "generate-sitemap": "ts-node scripts/generate-sitemap.js"
 
   },
   "dependencies": {
