@@ -1,27 +1,25 @@
-// File: src/app/[locale]/page.tsx
-
-import { getTranslations } from '@/lib/i18n';
-import { getCategoryTree } from '@/lib/category-data';
-import CategoryGrid from '@/components/CategoryGrid';
-import HeroSection from '@/components/HeroSection';
-import { Metadata } from 'next';
-
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations(params.locale);
-  return {
-    title: t.metaTitle || 'SoCalSolver - Smart Calculators for Life',
-    description: t.metaDescription || 'Explore powerful calculators in Finance, Health, Math, and more — in your language.'
-  };
-}
+// src/app/[locale]/page.tsx
+import { getDictionary } from '@/lib/i18n'
+import Link from 'next/link'
 
 export default async function Home({ params }: { params: { locale: string } }) {
-  const t = await getTranslations(params.locale);
-  const categories = await getCategoryTree(params.locale);
+  const locale = params.locale
+  const t = await getDictionary(locale)
 
   return (
-    <main className="p-6 space-y-12">
-      <HeroSection title={t.heroTitle} subtitle={t.heroSubtitle} locale={params.locale} />
-      <CategoryGrid categories={categories} locale={params.locale} />
+    <main className="p-8 text-center">
+      <h1 className="text-3xl font-bold">{t.home.title}</h1>
+      <p className="text-lg mb-4">{t.home.description}</p>
+      <ul className="flex gap-4 justify-center">
+        {Object.keys(t.categories).map(cat => (
+          <li key={cat}>
+            <Link href={`/${locale}/${cat}`} className="text-blue-600 underline">
+              {t.categories[cat].title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </main>
-  );
+  )
 }
+

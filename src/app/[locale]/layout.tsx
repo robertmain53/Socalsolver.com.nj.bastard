@@ -1,14 +1,19 @@
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+// src/app/[locale]/layout.tsx
+import { ReactNode } from 'react'
+import { getLocales } from '@/lib/i18n'
 
-export default function LocaleLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <Header />
-        <div className="flex-grow">{children}</div>
-        <Footer />
-      </body>
-    </html>
-  )
+export async function generateStaticParams() {
+  const locales = getLocales()
+  return locales.map(locale => ({ locale }))
 }
+
+export default function LocaleLayout({
+  children,
+  params,
+}: {
+  children: ReactNode
+  params: { locale: string }
+}) {
+  return <html lang={params.locale}><body>{children}</body></html>
+}
+
