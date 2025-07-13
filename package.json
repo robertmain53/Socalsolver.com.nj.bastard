@@ -15,8 +15,8 @@
     "validate:seo": "tsx scripts/validate-seo.ts",
     "validate:schema": "tsx scripts/validate-schema.ts",
     "build:prod": "NEXTJS_IGNORE_ESLINT=1 next build",
-    "generate-sitemap": "ts-node scripts/generate-sitemap.js"
-
+    "generate-sitemap": "ts-node scripts/generate-sitemap.js",
+    "build-search": "node scripts/build-search-index.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",

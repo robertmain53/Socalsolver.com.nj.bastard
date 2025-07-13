@@ -13,7 +13,7 @@ export default function HomePage() {
           <p className="text-lg text-gray-600">Smart calculators for every need.</p>
           <LanguageToggle />
         </section>
-
+s
         <section className="mb-10">
           <h2 className="text-xl font-semibold mb-2">Popular Categories</h2>
           <ul className="list-disc ml-6">

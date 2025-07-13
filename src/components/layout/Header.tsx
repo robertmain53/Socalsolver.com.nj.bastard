@@ -1,15 +1,16 @@
-'use client';
-import Link from 'next/link';
+'use client'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const labels = { en: 'Home', fr: 'Accueil', es: 'Inicio', it: 'Home' }
 
 export default function Header() {
+  const path = usePathname()
+  const locale = path.split('/')[1] || 'en'
   return (
-    <header className="w-full p-4 shadow-md flex justify-between items-center">
-      <Link href="/" className="text-xl font-bold">SocalSolver</Link>
-      <nav className="space-x-4">
-        <Link href="/calculators">Calculators</Link>
-        <Link href="/categories">Categories</Link>
-        <Link href="/about">About</Link>
-      </nav>
+    <header className="py-4 border-b flex gap-6 px-4">
+      <Link href={`/${locale}`} className="font-bold text-lg">SoCalSolver</Link>
+      <Link href={`/${locale}`}>{labels[locale] || 'Home'}</Link>
     </header>
-  );
+  )
 }
