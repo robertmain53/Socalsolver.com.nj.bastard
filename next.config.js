@@ -1,13 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+// next.config.js
+module.exports = {
   i18n: {
-    locales: ['en', 'es', 'it', 'fr'],
+    locales: ['en', 'it', 'es', 'fr'],
     defaultLocale: 'en',
-    localeDetection: false
+    localeDetection: false,
   },
-  experimental: {
-    serverActions: true
-  },
-};
-
-module.exports = nextConfig;
+}

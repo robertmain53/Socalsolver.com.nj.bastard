@@ -1,23 +1,16 @@
+// src/app/[locale]/page.tsx
 import { getDictionary } from '@/lib/i18n'
-import { getLocale } from '@/lib/locale'
-import Link from 'next/link'
+import { Locale } from '@/lib/i18n-config'
 
-export default async function Home({ params }: { params: { locale: string } }) {
-  const locale = getLocale(params.locale)
+export default async function Home({ params }: { params: { locale: Locale } }) {
+  const locale = params.locale || 'en'
   const t = await getDictionary(locale)
+
   return (
     <main className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4">{t.home.title}</h1>
-      <p className="text-lg mb-6">{t.home.description}</p>
-      <ul className="grid gap-2">
-        {['finance', 'health', 'math'].map(cat => (
-          <li key={cat}>
-            <Link href={`/${locale}/${cat}`} className="text-blue-600 underline">
-              {t.categories?.[cat]?.title || cat}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <h1 className="text-4xl font-bold mb-4">{t?.home?.title || 'Welcome'}</h1>
+      <p className="text-lg mb-6">{t?.home?.description || 'Smart calculators for every need.'}</p>
     </main>
   )
 }
+

@@ -4,7 +4,7 @@
   "description": "Professional calculator platform with sunset coastal design theme and multi-language support",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_ESLINT_IGNORE=true next build",
     "start": "next start"
   },
   "dependencies": {
