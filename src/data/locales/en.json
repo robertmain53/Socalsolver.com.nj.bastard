@@ -1,5 +1,8 @@
 {
-  "home": { "title": "Welcome to SoCalSolver", "description": "Smart calculators for every need." },
+  "home": {
+    "title": "Welcome to SoCalSolver (en)",
+    "description": "Smart calculators for every need."
+  },
   "categories": {
     "finance": { "title": "Finance" },
     "health": { "title": "Health" },
